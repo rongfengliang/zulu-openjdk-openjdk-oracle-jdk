@@ -1,0 +1,13 @@
+scrape_configs:
+  - job_name: zulu
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['zulu:8080']
+  - job_name: openjdk
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['openjdk:8080']
+  - job_name: oracle
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['oracle:8080']

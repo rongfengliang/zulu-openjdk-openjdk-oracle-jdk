@@ -1,0 +1,1 @@
+ab -c 10 -n 100000 http://localhost:8081/actuator/env
