@@ -15,18 +15,65 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 6,
+  "id": 1,
   "links": [],
   "panels": [
+    {
+      "aliasColors": {},
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "Prometheus",
+      "fontSize": "80%",
+      "format": "short",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 12,
+      "interval": null,
+      "legend": {
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "values": true
+      },
+      "legendType": "Under graph",
+      "links": [],
+      "maxDataPoints": 3,
+      "nullPointMode": "connected",
+      "options": {},
+      "pieType": "pie",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "expr": "jvm_buffer_count_buffers",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "内存占用",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
     {
       "cacheTimeout": null,
       "columns": [],
       "datasource": "Prometheus",
       "fontSize": "100%",
       "gridPos": {
-        "h": 9,
-        "w": 24,
-        "x": 0,
+        "h": 8,
+        "w": 12,
+        "x": 12,
         "y": 0
       },
       "id": 2,
@@ -87,9 +134,9 @@
       "fill": 1,
       "gridPos": {
         "h": 8,
-        "w": 24,
+        "w": 12,
         "x": 0,
-        "y": 9
+        "y": 8
       },
       "id": 10,
       "legend": {
@@ -171,12 +218,12 @@
       "datasource": "Prometheus",
       "fill": 1,
       "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 17
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
       },
-      "id": 8,
+      "id": 4,
       "legend": {
         "avg": false,
         "current": false,
@@ -201,7 +248,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "jvm_classes_loaded_classes",
+          "expr": "jvm_memory_used_bytes",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -211,7 +258,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "jvm class load counts",
+      "title": "jvm 分配",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -256,10 +303,10 @@
       "datasource": "Prometheus",
       "fill": 1,
       "gridPos": {
-        "h": 11,
-        "w": 24,
+        "h": 8,
+        "w": 12,
         "x": 0,
-        "y": 24
+        "y": 16
       },
       "id": 6,
       "legend": {
@@ -341,12 +388,12 @@
       "datasource": "Prometheus",
       "fill": 1,
       "gridPos": {
-        "h": 17,
-        "w": 24,
-        "x": 0,
-        "y": 35
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 16
       },
-      "id": 4,
+      "id": 8,
       "legend": {
         "avg": false,
         "current": false,
@@ -371,7 +418,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "jvm_memory_used_bytes",
+          "expr": "jvm_classes_loaded_classes",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -381,7 +428,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "jvm 分配",
+      "title": "jvm class load counts",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -458,5 +505,5 @@
   "timezone": "",
   "title": "接口url 请求",
   "uid": "Vdg7XPNWk",
-  "version": 3
+  "version": 5
 }
