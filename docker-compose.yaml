@@ -18,6 +18,12 @@ services:
       dockerfile: Dockerfile
     ports: 
     - "8082:8080"
+  konajdk:
+    build: 
+      context: ./konajdk
+      dockerfile: Dockerfile
+    ports: 
+    - "8083:8080"
   grafana:
     image: grafana/grafana
     ports:

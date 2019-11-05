@@ -1,1 +1,4 @@
 load-test/jdk/*.log
+gc.log
+chart.png
+summary.csv

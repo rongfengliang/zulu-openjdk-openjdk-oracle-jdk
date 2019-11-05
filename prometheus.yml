@@ -17,3 +17,9 @@ scrape_configs:
     metrics_path: /actuator/prometheus
     static_configs:
       - targets: ['oracle:8080']
+  - job_name: konajdk
+    scrape_interval: 10s
+    scrape_timeout: 10s
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['konajdk:8080']

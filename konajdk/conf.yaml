@@ -1,0 +1,7 @@
+startDelaySeconds: 0
+hostPort: localhost:30384
+ssl: false
+lowercaseOutputName: false
+lowercaseOutputLabelNames: false
+rules:
+- pattern: ".*"
